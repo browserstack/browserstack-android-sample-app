@@ -1,0 +1,33 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+default_platform(:android)
+
+platform :android do
+  desc "Uploads build to Browserstack's app automate and app live and runs all the tests on uploaded app."
+  lane :upload_test do
+    # Uploads app to BrowserStack app automate.
+    upload_to_browserstack_app_automate(
+      browserstack_username: ENV["BROWSERSTACK_USERNAME"],
+      browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
+      file_path: "browserstack_android_sample/build/outputs/apk/debug/browserstack_android_sample-debug.apk"
+    )
+
+    # Uploads app to BrowserStack app live.
+    upload_to_browserstack_app_live(
+      browserstack_username: ENV["BROWSERSTACK_USERNAME"],
+      browserstack_access_key: ENV["BROWSERSTACK_ACCESS_KEY"],
+      file_path: "browserstack_android_sample/build/outputs/apk/debug/browserstack_android_sample-debug.apk"
+    )
+    gradle(task: "test")
+  end
+end
