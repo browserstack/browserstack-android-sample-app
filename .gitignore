@@ -9,3 +9,4 @@
 /captures
 .externalNativeBuild
 .idea/
+fastlane/report.xml
