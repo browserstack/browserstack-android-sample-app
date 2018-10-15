@@ -13,7 +13,7 @@ script:
   - ./gradlew test
 addons:
   browserstack:
-    username: "pankajahuja2"
+    username: "BROWSERSTACK_USERNAME"
     access_key:
-      secure: "yN5lR97NICp1/GbUGB0RCpQzfy8UR7zfZDyGXSVAomM0RuoNmQj8yuLU5cqdyitImJha10GSnHmKcHNdUfn1tExJkkUCZ/FqvzLb9OYuM0ZpHNz/MEAGlm59/BdKT6wTXi79p0BAgx6w92hPyRsjWLaBhmCu5plOF7G6F5ROhO+Yca0EOILdeaI3WvRFgngWbyAFM0/3dgJYPCYh93KDUlPJKb5AwB07u3DNNEhPHksQeGSJrkYHAhGDE6COngHvwpFRYif+1TwuWvof6bN8/ao/JEBYmMCrit5OEmQSh8+rrksRAsS7Uyrz71WT7BfVjG5gmE0W5dvg0vEHBFjwn8e/EZlgDle5xbm1f71fsVn0Jri398TmZwYzeVgHGvYCjwx2070bJvRnviBW8uPKx+VaDV7Ray+mxMPLqifp+w1e7InvThr5wJ5R9gK5nA1nTrMorP/Z4GDkIyK5cD7vS25z1m5cWG/kxJQMQ1I7OtRA/zOzss/dJBKVwnQO+6tld4huwaQ0ELWV/zrKTGnTxd7nWLBAy3HH4oV7Ru47i3S4QAKojkByZirCzf0GbWV3Sh5uIRnTcesX2jZw7K6Dv4tNM3q+rDC6gf7md5qRQwDB/Ry/dcV0f+brsAbq9/93Kj+t5ghHLDdeZv8wzKUo+mrWiDVtt6DRSx1DSObUu0k="
+      secure: "BrowserStack access key after travis encrypt"
     app_path: 'browserstack_android_sample/build/outputs/apk/debug/browserstack_android_sample-debug.apk'
